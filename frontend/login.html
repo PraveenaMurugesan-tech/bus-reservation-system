@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Bus Reservation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body id="login-page">
+    <header class="navbar">
+        <a class="brand" href="index.html"><span class="logo-icon"><i class="fas fa-bus-alt"></i></span>BusReserve</a>
+        <nav class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a class="active" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="booking.html"><i class="fas fa-search"></i> Search Buses</a>
+            <a href="payment.html"><i class="fas fa-credit-card"></i> Payments</a>
+            <a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a>
+        </nav>
+        <button id="dark-mode-toggle" class="icon-btn" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+    </header>
+
+    <main class="form-layout auth-layout">
+        <section class="card auth-card">
+            <div class="auth-header">
+                <span class="eyebrow">Secure login</span>
+                <h1>Access your booking account</h1>
+                <p>Sign in to manage bookings, payments, and seat reservations with ease.</p>
+            </div>
+            <form id="login-form" class="auth-form">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" placeholder="you@example.com" required />
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" placeholder="••••••••" required />
+                <button type="submit" class="button full-width">Login</button>
+                <p class="small-text">New to BusReserve? <a href="register.html">Create an account</a>.</p>
+                <div id="login-message" class="message"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <h3>BusReserve</h3>
+            <p>Modern bus booking made professional and effortless.</p>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="booking.html">Search Buses</a>
+            <a href="register.html">Register</a>
+            <a href="admin.html">Admin</a>
+        </div>
+        <div>
+            <h3>Contact</h3>
+            <p>support@busreserve.com</p>
+            <p>+91 98765 43210</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

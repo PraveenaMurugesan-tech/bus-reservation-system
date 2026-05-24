@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0" stop-color="#2563EB" />
+      <stop offset="1" stop-color="#06B6D4" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="#0F172A" />
+  <g transform="translate(80,200)">
+    <rect x="0" y="0" width="1040" height="320" rx="48" fill="url(#g1)" />
+    <rect x="40" y="36" width="960" height="248" rx="28" fill="#F8FAFC" opacity="0.06" />
+    <rect x="820" y="40" width="160" height="56" rx="12" fill="#fff" opacity="0.08" />
+    <g fill="#fff" opacity="0.95" transform="translate(36,60)">
+      <rect x="0" y="0" width="160" height="40" rx="8" />
+      <rect x="180" y="0" width="240" height="40" rx="8" />
+      <rect x="440" y="0" width="240" height="40" rx="8" />
+      <rect x="700" y="0" width="240" height="40" rx="8" />
+    </g>
+    <g transform="translate(80,260)">
+      <circle cx="120" cy="120" r="60" fill="#111827" />
+      <circle cx="120" cy="120" r="28" fill="#9CA3AF" />
+      <circle cx="760" cy="120" r="60" fill="#111827" />
+      <circle cx="760" cy="120" r="28" fill="#9CA3AF" />
+    </g>
+  </g>
+</svg>

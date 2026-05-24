@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bus Reservation System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body id="home-page">
+    <header class="navbar">
+        <a class="brand" href="index.html"><span class="logo-icon"><i class="fas fa-bus-alt"></i></span>BusReserve</a>
+        <nav class="nav-links">
+            <a class="active" href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="booking.html"><i class="fas fa-search"></i> Search Buses</a>
+            <a href="booking.html"><i class="fas fa-ticket-alt"></i> Bookings</a>
+            <a href="payment.html"><i class="fas fa-credit-card"></i> Payments</a>
+            <a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a>
+            <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </nav>
+        <button id="dark-mode-toggle" class="icon-btn" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+    </header>
+
+    <main class="page-layout">
+        <section class="hero hero-home">
+            <div class="hero-copy">
+                <span class="eyebrow">Safe & Comfortable Travel</span>
+                <h1>Bus Reservation System</h1>
+                <p>Book safe, comfortable & affordable bus tickets online with a premium workflow designed for smooth travel planning.</p>
+                <div class="hero-actions">
+                    <a class="button" href="booking.html"><i class="fas fa-search"></i> Search Buses</a>
+                    <a class="button secondary" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                </div>
+            </div>
+            <div class="hero-panel">
+                <div class="hero-card-header">
+                    <div>
+                        <span class="eyebrow">Easy online booking</span>
+                        <h2>Book Your Journey</h2>
+                    </div>
+                    <div class="badge"><i class="fas fa-bolt"></i> Fast & Secure</div>
+                </div>
+                <form id="home-search-form" class="grid-2">
+                    <label>
+                        <span>From</span>
+                        <select id="home-search-source" required></select>
+                    </label>
+                    <label>
+                        <span>To</span>
+                        <select id="home-search-destination" required></select>
+                    </label>
+                    <label>
+                        <span>Travel date</span>
+                        <input id="home-search-date" type="date" />
+                    </label>
+                    <label>
+                        <span>Bus type</span>
+                        <select id="home-search-type">
+                            <option value="">All types</option>
+                            <option value="AC Sleeper">AC Sleeper</option>
+                            <option value="Volvo">Volvo</option>
+                            <option value="Luxury Bus">Luxury Bus</option>
+                            <option value="Express Bus">Express Bus</option>
+                            <option value="Semi Sleeper">Semi Sleeper</option>
+                        </select>
+                    </label>
+                    <button class="button full-width" type="submit"><i class="fas fa-search"></i> Find Buses</button>
+                </form>
+                <div id="home-search-message" class="message"></div>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <span class="stat-icon"><i class="fas fa-smile"></i></span>
+                <h3>1200+</h3>
+                <p>Happy passengers</p>
+            </article>
+            <article class="stat-card">
+                <span class="stat-icon"><i class="fas fa-road"></i></span>
+                <h3>85+</h3>
+                <p>Route options</p>
+            </article>
+            <article class="stat-card">
+                <span class="stat-icon"><i class="fas fa-bus"></i></span>
+                <h3>500+</h3>
+                <p>Premium buses</p>
+            </article>
+            <article class="stat-card">
+                <span class="stat-icon"><i class="fas fa-headset"></i></span>
+                <h3>24/7</h3>
+                <p>Customer support</p>
+            </article>
+        </section>
+
+        <section class="section-block">
+            <div class="section-head">
+                <div>
+                    <span class="eyebrow">Luxury Bus Services</span>
+                    <h2>Featured bus fleets</h2>
+                </div>
+            </div>
+            <div class="bus-card-grid">
+                <article class="bus-card">
+                    <div class="bus-thumb"><img src="assets/images/ac-sleeper.svg" alt="AC Sleeper Bus" /></div>
+                    <div class="bus-card-body">
+                        <p class="bus-label">AC Sleeper</p>
+                        <h3>Nordic Sleeper</h3>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> City Central → Riverside</li>
+                            <li><i class="fas fa-clock"></i> 11:00 PM → 6:30 AM</li>
+                            <li><i class="fas fa-chair"></i> 40 seats</li>
+                            <li><i class="fas fa-dollar-sign"></i> ₹1,250 onwards</li>
+                        </ul>
+                        <button class="button secondary small">Book Now</button>
+                    </div>
+                </article>
+                <article class="bus-card">
+                    <div class="bus-thumb"><img src="assets/images/volvo.svg" alt="Volvo Bus" /></div>
+                    <div class="bus-card-body">
+                        <p class="bus-label">Volvo</p>
+                        <h3>Skyline Express</h3>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Airport Plaza → Downtown</li>
+                            <li><i class="fas fa-clock"></i> 8:00 AM → 12:00 PM</li>
+                            <li><i class="fas fa-chair"></i> 45 seats</li>
+                            <li><i class="fas fa-dollar-sign"></i> ₹980 onwards</li>
+                        </ul>
+                        <button class="button secondary small">Book Now</button>
+                    </div>
+                </article>
+                <article class="bus-card">
+                    <div class="bus-thumb"><img src="assets/images/luxury-bus.svg" alt="Luxury Bus" /></div>
+                    <div class="bus-card-body">
+                        <p class="bus-label">Luxury Bus</p>
+                        <h3>Royal Cruiser</h3>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Harbor View → Grand Terminal</li>
+                            <li><i class="fas fa-clock"></i> 6:45 PM → 10:30 PM</li>
+                            <li><i class="fas fa-chair"></i> 30 seats</li>
+                            <li><i class="fas fa-dollar-sign"></i> ₹1,450 onwards</li>
+                        </ul>
+                        <button class="button secondary small">Book Now</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-block feature-grid-2">
+            <article class="feature-card">
+                <i class="fas fa-bus"></i>
+                <h3>Travel With Comfort</h3>
+                <p>Enjoy reliable journeys with premium seating, climate control, and onboard amenities.</p>
+            </article>
+            <article class="feature-card">
+                <i class="fas fa-ticket-alt"></i>
+                <h3>Easy Online Booking</h3>
+                <p>Search routes, choose seats, and complete payments in one streamlined booking experience.</p>
+            </article>
+            <article class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Safe & Reliable</h3>
+                <p>Book with confidence through secure payments, admin operations, and real-time data flows.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <h3>BusReserve</h3>
+            <p>Modern bus ticketing for high-quality project presentations and real-use travel planning.</p>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="booking.html">Search Buses</a>
+            <a href="payment.html">Payments</a>
+            <a href="admin.html">Admin</a>
+        </div>
+        <div>
+            <h3>Contact</h3>
+            <p>support@busreserve.com</p>
+            <p>+91 98765 43210</p>
+            <div class="social-list">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

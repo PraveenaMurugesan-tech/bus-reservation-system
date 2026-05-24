@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Bus Reservation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body id="admin-page">
+    <header class="navbar">
+        <a class="brand" href="index.html"><span class="logo-icon"><i class="fas fa-bus-alt"></i></span>BusReserve</a>
+        <nav class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="booking.html"><i class="fas fa-search"></i> Search Buses</a>
+            <a href="booking.html"><i class="fas fa-ticket-alt"></i> Bookings</a>
+            <a href="payment.html"><i class="fas fa-credit-card"></i> Payments</a>
+            <a class="active" href="admin.html"><i class="fas fa-user-shield"></i> Admin</a>
+            <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </nav>
+        <button id="dark-mode-toggle" class="icon-btn" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+    </header>
+
+    <main class="page-layout admin-dashboard">
+        <section class="stats-grid admin-stats">
+            <article class="stat-card">
+                <span class="stat-icon"><i class="fas fa-route"></i></span>
+                <h3 id="routes-count">0</h3>
+                <p>Routes managed</p>
+            </article>
+            <article class="stat-card">
+                <span class="stat-icon"><i class="fas fa-bus"></i></span>
+                <h3 id="buses-count">0</h3>
+                <p>Buses registered</p>
+            </article>
+            <article class="stat-card">
+                <span class="stat-icon"><i class="fas fa-chair"></i></span>
+                <h3 id="seats-count">0</h3>
+                <p>Seats available</p>
+            </article>
+            <article class="stat-card">
+                <span class="stat-icon"><i class="fas fa-calendar-check"></i></span>
+                <h3 id="bookings-count">0</h3>
+                <p>Bookings recorded</p>
+            </article>
+        </section>
+
+        <section class="admin-grid">
+            <article class="card admin-panel">
+                <h2>Manage Routes</h2>
+                <form id="route-form" class="mini-form">
+                    <label>Source</label>
+                    <input id="admin-route-source" required />
+                    <label>Destination</label>
+                    <input id="admin-route-destination" required />
+                    <label>Departure Time</label>
+                    <input id="admin-route-departure" type="time" required />
+                    <label>Arrival Time</label>
+                    <input id="admin-route-arrival" type="time" required />
+                    <button type="submit" class="button">Add Route</button>
+                    <div id="admin-route-message" class="message"></div>
+                </form>
+            </article>
+            <article class="card admin-panel">
+                <h2>Manage Buses</h2>
+                <form id="bus-form" class="mini-form">
+                    <label>Bus Name</label>
+                    <input id="admin-bus-name" required />
+                    <label>Bus Type</label>
+                    <input id="admin-bus-type" required placeholder="AC Sleeper, Volvo, Express Bus" />
+                    <label>Total Seats</label>
+                    <input id="admin-bus-total" type="number" min="1" required />
+                    <label>Route</label>
+                    <select id="admin-bus-route" required></select>
+                    <button type="submit" class="button">Add Bus</button>
+                    <div id="admin-bus-message" class="message"></div>
+                </form>
+            </article>
+            <article class="card admin-panel">
+                <h2>Manage Seats</h2>
+                <form id="seat-form" class="mini-form">
+                    <label>Bus</label>
+                    <select id="admin-seat-bus" required></select>
+                    <label>Seat Number</label>
+                    <input id="admin-seat-number" required placeholder="A1, B3" />
+                    <label>Seat Type</label>
+                    <input id="admin-seat-type" required placeholder="Regular, Sleeper" />
+                    <label>Availability</label>
+                    <select id="admin-seat-availability">
+                        <option>Available</option>
+                        <option>Booked</option>
+                    </select>
+                    <button type="submit" class="button">Add Seat</button>
+                    <div id="admin-seat-message" class="message"></div>
+                </form>
+            </article>
+            <article class="card admin-panel">
+                <h2>Quick updates</h2>
+                <form id="update-seat-form" class="mini-form">
+                    <label>Seat ID</label>
+                    <input id="admin-update-seat-id" type="number" required />
+                    <label>Availability</label>
+                    <select id="admin-update-seat-availability">
+                        <option>Available</option>
+                        <option>Booked</option>
+                    </select>
+                    <button type="submit" class="button">Update Seat</button>
+                    <div id="admin-update-seat-message" class="message"></div>
+                </form>
+                <form id="cancel-booking-form" class="mini-form" style="margin-top: 1.5rem;">
+                    <label>Booking ID</label>
+                    <input id="admin-cancel-booking-id" type="number" required />
+                    <button type="submit" class="button secondary">Cancel Booking</button>
+                    <div id="admin-cancel-booking-message" class="message"></div>
+                </form>
+            </article>
+            <article class="card admin-panel" style="grid-column: 1 / -1;">
+                <h2>Latest bookings</h2>
+                <div id="admin-bookings" class="table-scroll"></div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <h3>BusReserve</h3>
+            <p>Admin controls for routes, buses, seats, and bookings with professional visuals.</p>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="booking.html">Search Buses</a>
+            <a href="payment.html">Payments</a>
+            <a href="login.html">Login</a>
+        </div>
+        <div>
+            <h3>Contact</h3>
+            <p>support@busreserve.com</p>
+            <p>+91 98765 43210</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

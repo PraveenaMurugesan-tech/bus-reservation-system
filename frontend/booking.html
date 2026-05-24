@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking - Bus Reservation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body id="booking-page">
+    <header class="navbar">
+        <a class="brand" href="index.html"><span class="logo-icon"><i class="fas fa-bus-alt"></i></span>BusReserve</a>
+        <nav class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a class="active" href="booking.html"><i class="fas fa-search"></i> Search Buses</a>
+            <a href="booking.html"><i class="fas fa-ticket-alt"></i> Bookings</a>
+            <a href="payment.html"><i class="fas fa-credit-card"></i> Payments</a>
+            <a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a>
+            <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </nav>
+        <button id="dark-mode-toggle" class="icon-btn" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+    </header>
+
+    <main class="page-layout booking-layout">
+        <section class="card search-panel">
+            <div class="search-header">
+                <div>
+                    <span class="eyebrow">Book Your Journey</span>
+                    <h1>Find the best bus for your route</h1>
+                    <p>Search available services, compare departure and arrival times, and choose the right bus for your travel plan.</p>
+                </div>
+                <div class="badge"><i class="fas fa-filter"></i> Smart search</div>
+            </div>
+            <form id="booking-search-form" class="grid-3">
+                <label>
+                    <span>From</span>
+                    <select id="search-source"></select>
+                </label>
+                <label>
+                    <span>To</span>
+                    <select id="search-destination"></select>
+                </label>
+                <label>
+                    <span>Date</span>
+                    <input id="search-date" type="date" />
+                </label>
+                <label>
+                    <span>Bus type</span>
+                    <select id="search-bus-type">
+                        <option value="">All buses</option>
+                        <option value="AC Sleeper">AC Sleeper</option>
+                        <option value="Volvo">Volvo</option>
+                        <option value="Luxury Bus">Luxury Bus</option>
+                        <option value="Express Bus">Express Bus</option>
+                        <option value="Semi Sleeper">Semi Sleeper</option>
+                    </select>
+                </label>
+                <div class="full-width">
+                    <button id="search-button" type="button" class="button full-width"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <div id="search-message" class="message full-width"></div>
+            </form>
+        </section>
+
+        <section class="card section-card">
+            <div class="section-header">
+                <div>
+                    <span class="eyebrow">Available buses</span>
+                    <h2>Choose your ride</h2>
+                </div>
+                <p>Select any bus card to view seats and continue booking.</p>
+            </div>
+            <div id="buses-list" class="bus-card-grid"></div>
+        </section>
+
+        <section class="card section-card">
+            <div class="section-header">
+                <div>
+                    <span class="eyebrow">Seat selection</span>
+                    <h2>Choose a seat</h2>
+                </div>
+                <div class="seat-legend">
+                    <span><span class="legend-dot available"></span> Available</span>
+                    <span><span class="legend-dot selected"></span> Selected</span>
+                    <span><span class="legend-dot booked"></span> Booked</span>
+                </div>
+            </div>
+            <div id="seat-list" class="seat-grid"></div>
+            <div class="section-actions" style="margin-top: 1.5rem;">
+                <button id="book-seat-button" class="button" disabled><i class="fas fa-check-circle"></i> Confirm Seat</button>
+            </div>
+            <div id="seat-message" class="message"></div>
+        </section>
+
+        <section class="card section-card">
+            <div class="section-header">
+                <div>
+                    <span class="eyebrow">Booking history</span>
+                    <h2>Your recent trips</h2>
+                </div>
+            </div>
+            <div id="history-content"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <h3>BusReserve</h3>
+            <p>Book trips with premium fleets and easy online checkout.</p>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="booking.html">Search Buses</a>
+            <a href="payment.html">Payments</a>
+            <a href="admin.html">Admin</a>
+        </div>
+        <div>
+            <h3>Contact</h3>
+            <p>support@busreserve.com</p>
+            <p>+91 98765 43210</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
