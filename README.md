@@ -43,7 +43,6 @@ A full-stack web application for bus reservation built with HTML, CSS, JavaScrip
    venv\Scripts\activate
    pip install -r backend/requirements.txt
    ```
-5. Start the Flask backend from the repository root:
    ```bash
    python backend/app.py
    ```
