@@ -1,3 +1,25 @@
+# 🚌 Bus Reservation System
+
+A **Bus Reservation System** is a database-driven application designed to simplify and automate the process of searching for buses, checking seat availability, reserving seats, and managing passenger and booking information.
+
+The system provides an easy-to-use platform for passengers to find suitable buses based on their **source, destination, date, and timing**, while allowing administrators to efficiently manage buses, routes, schedules, seats, and reservations.
+
+## ✨ Features
+
+* 🔐 User registration and login
+* 🚌 Search buses by source and destination
+* 📅 Search buses based on travel date
+* 💺 Check real-time seat availability
+* 🎟️ Book and cancel tickets
+* 👤 Manage passenger details
+* 📋 View booking history
+* 🚌 Manage bus and route information
+* 👨‍💼 Admin management system
+* 🗄️ Database-based reservation management
+
+## 🎯 Objective
+
+The main objective of this project is to develop an efficient and reliable system that **automates the bus booking pr**
 # Bus Reservation System
 
 A full-stack web application for bus reservation built with HTML, CSS, JavaScript, Python Flask, and MySQL.
