@@ -78,7 +78,7 @@ A full-stack web application for bus reservation built with HTML, CSS, JavaScrip
 - Payment processing for a booking
 - Booking history view
 - Admin dashboard for managing routes, buses, seats, and bookings
-- MySQL triggers and views
+- MySQL triggers
 
 ## API Endpoints
 
