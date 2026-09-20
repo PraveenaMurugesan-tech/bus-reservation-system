@@ -22,7 +22,7 @@ The system provides an easy-to-use platform for passengers to find suitable buse
 The main objective of this project is to develop an efficient and reliable system that **automates the bus booking pr**
 # Bus Reservation System
 
-A full-stack web application for bus reservation built with HTML, CSS, JavaScript, Python Flask, and MySQL.
+A full-stack web application for bus reservation built with HTML, CSS, JavaScript, Python Flask, and MySQL/Postgres.
 
 ## Folder Structure
 
