@@ -50,7 +50,7 @@ A full-stack web application for bus reservation built with HTML, CSS, JavaScrip
 ## Setup Instructions
 
 1. Install MySQL locally.
-2. Open MySQL command line or MySQL Workbench and run:
+2. Open MySQL command line or MySQL Workbench :
    ```sql
    SOURCE path/to/database/schema.sql;
    SOURCE path/to/database/triggers.sql;
