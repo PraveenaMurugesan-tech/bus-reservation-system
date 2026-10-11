@@ -24,7 +24,7 @@ The main objective of this project is to develop an efficient and reliable syste
 
 A full-stack web application for bus reservation built with HTML, CSS, JavaScript, Python Flask, and MySQL/Postgres.
 
-## Folder Structure
+## Folder 
 
 - `database/`
   - `schema.sql` - database and table schema
