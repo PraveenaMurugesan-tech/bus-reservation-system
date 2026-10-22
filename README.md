@@ -15,7 +15,7 @@ The system provides an easy-to-use platform for passengers to find suitable buse
 * 📋 View booking history
 * 🚌 Manage bus and route information
 * 👨‍💼 Admin management system
-* 🗄️ Database-based reservation management
+* 🗄️ Database-based reservation 
 
 ## 🎯 Objective
 
