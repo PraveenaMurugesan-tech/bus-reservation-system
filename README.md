@@ -31,7 +31,7 @@ A full-stack web application for bus reservation built with HTML, CSS, JavaScrip
   - `sample_data.sql` - sample records for users, routes, buses, seats, bookings, payments
   - `queries.sql` - example SQL commands for INSERT, UPDATE, DELETE, ALTER, MODIFY, VIEW
   - `triggers.sql` - trigger to update seat availability after booking insertion
-  - `views.sql` - view creation for booking summary
+  - `views.sql` - view creation for booking 
 - `backend/`
   - `app.py` - Flask API server
   - `models/db.py` - MySQL connection logic
